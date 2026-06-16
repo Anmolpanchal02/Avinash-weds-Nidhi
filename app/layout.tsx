@@ -16,9 +16,10 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/image.png",
-        width: 1200,
-        height: 630,
+        width: 904,
+        height: 1280,
         alt: "Avinash & Nidhi Wedding Invitation — 12 July 2026",
+        type: "image/png",
       },
     ],
   },
