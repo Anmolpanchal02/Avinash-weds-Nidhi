@@ -22,7 +22,7 @@ export const WEDDING = {
     fullName: 'Hridyansh Kalu (Avinash)',
     hindiName: 'हृदयांश कालू (अविनाश)',
     city: 'Bhilai',
-    cityHindi: 'भिलाई',
+    cityHindi: 'निवाई',
     parents: 'Shri Rajesh Ji Patni & Smt. Shimla Devi',
     parentsHindi: 'सुपुत्र: श्रीमती शिमलादेवी एवं श्री राजेश जी पाटनी',
     grandparents: 'Late Shri Manakchand Ji Patni & Smt. Laddevi',
