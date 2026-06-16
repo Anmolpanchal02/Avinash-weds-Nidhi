@@ -1,69 +1,24 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
-import { WEDDING } from "./data/wedding";
-import { getSiteUrl } from "./lib/site";
-
-const siteUrl = getSiteUrl();
-const shareTitle = `${WEDDING.groom.name} & ${WEDDING.bride.name} — Wedding Invitation`;
-const shareDescription = `You're invited to celebrate the wedding of ${WEDDING.groom.name} & ${WEDDING.bride.name} on ${WEDDING.weekday}, ${WEDDING.date} at ${WEDDING.venue.name}, ${WEDDING.venue.address}, ${WEDDING.venue.state}.`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: `${WEDDING.groom.name} & ${WEDDING.bride.name} Wedding | ${WEDDING.date}`,
-    template: `%s | ${WEDDING.groom.name} & ${WEDDING.bride.name}`,
-  },
-  description: shareDescription,
-  keywords: [
-    "wedding invitation",
-    WEDDING.groom.name,
-    WEDDING.bride.name,
-    WEDDING.date,
-    WEDDING.venue.name,
-    WEDDING.venue.state,
-    "Indian wedding",
-    "Rajasthan wedding",
-  ],
-  authors: [{ name: `${WEDDING.groom.name} & ${WEDDING.bride.name}` }],
-  creator: `${WEDDING.groom.name} & ${WEDDING.bride.name}`,
+  title: "Avinash & Nidhi — Wedding Invitation | 12 July 2026",
+  description: "Join us in celebrating the sacred union of Avinash (Kalu) & Nidhi (Twinkle) — Sunday, 12 July 2026 at Katara Paradise, Tonk Road, Niwai, Rajasthan.",
+  keywords: ["Avinash Nidhi Wedding", "Wedding Invitation", "Niwai Rajasthan", "12 July 2026"],
   openGraph: {
-    title: shareTitle,
-    description: `${WEDDING.weekday}, ${WEDDING.date} · ${WEDDING.venue.name}, ${WEDDING.venue.address}, ${WEDDING.venue.state}`,
-    url: siteUrl,
-    siteName: `${WEDDING.groom.name} & ${WEDDING.bride.name} Wedding`,
-    locale: "en_IN",
+    title: "Avinash ❤️ Nidhi — Wedding Invitation",
+    description: "Sunday, 12 July 2026 · Katara Paradise, Niwai, Rajasthan",
+    url: "https://avinash-weds-nidhi.vercel.app",
+    siteName: "Avinash & Nidhi Wedding",
     type: "website",
-    images: [
-      {
-        url: "/og-wedding-invitation.jpg",
-        width: 723,
-        height: 1024,
-        alt: `Wedding Invitation — ${WEDDING.groom.name} & ${WEDDING.bride.name}`,
-        type: "image/jpeg",
-      },
-    ],
+    locale: "en_IN",
   },
   twitter: {
     card: "summary_large_image",
-    title: shareTitle,
-    description: `${WEDDING.weekday}, ${WEDDING.date} · ${WEDDING.venue.name}, ${WEDDING.venue.state}`,
-    images: ["/og-wedding-invitation.jpg"],
+    title: "Avinash ❤️ Nidhi — Wedding Invitation",
+    description: "Sunday, 12 July 2026 · Katara Paradise, Niwai, Rajasthan",
   },
-  alternates: {
-    canonical: siteUrl,
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-  themeColor: "#1A0508",
-  colorScheme: "dark",
+  metadataBase: new URL("https://avinash-weds-nidhi.vercel.app"),
 };
 
 export default function RootLayout({
@@ -77,13 +32,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700&family=Great+Vibes&family=Cinzel:wght@400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700&family=Great+Vibes&family=Cinzel:wght@400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
