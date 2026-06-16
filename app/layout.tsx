@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/og-wedding-invitation.jpg",
+        url: "/image.png",
         width: 1200,
         height: 630,
         alt: "Avinash & Nidhi Wedding Invitation — 12 July 2026",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Avinash ❤️ Nidhi — Wedding Invitation",
     description: "Sunday, 12 July 2026 · Katara Paradise, Niwai, Rajasthan",
-    images: ["/og-wedding-invitation.jpg"],
+    images: ["/image.png"],
   },
   metadataBase: new URL("https://avinash-weds-nidhi.vercel.app"),
 };
