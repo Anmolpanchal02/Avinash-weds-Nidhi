@@ -8,7 +8,7 @@ import ToranBorder from './components/ToranBorder';
 import HeroSection from './components/HeroSection';
 import InvitationSection from './components/InvitationSection';
 import CeremoniesSection from './components/CeremoniesSection';
-import EventScheduleSection from './components/EventScheduleSection';
+
 import VenueSection from './components/VenueSection';
 import FamilySection from './components/FamilySection';
 import BlessingsSection from './components/BlessingsSection';
@@ -46,8 +46,6 @@ export default function Home() {
             <div id="invitation"><InvitationSection /></div>
             <ToranBorder />
             <div id="ceremonies"><CeremoniesSection /></div>
-            <ToranBorder />
-            <EventScheduleSection />
             <ToranBorder />
             <div id="venue"><VenueSection /></div>
             <ToranBorder />
